@@ -4,10 +4,10 @@ angular.module('templateStore.templates', ['ngRoute'])
 	$routeProvider
 		.when('/templates', {
 			templateUrl: 'templates/templates.html',
-			controller: 'TemplateCtrl'
+			controller: 'TemplatesCtrl'
 		});
 }])
 
 .controller('TemplatesCtrl', ['$scope', function($scope){
-	console.log('TemplatesCtrl Initialized');
-}])
+	console.log('TemplatesCtrl Initialized', $scope);
+}]);
