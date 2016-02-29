@@ -1,0 +1,22 @@
+<div class="row">
+	<div class="col-md-12">
+		
+	</div>
+	<div class="col-md-4">
+		<img class="img-full img-thumbnail" src="images/{{mainImage}}" alt="">
+		<div class="row">
+			<div ng-repeat="image in template.images | limitTo:4">
+				<div class="col-md-3">
+					<img class="img-full img-thumbnail" ng-src="images/{{image.name}}" alt="image" ng-click="setImage(image)">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-8">
+		<h3>{{name}}</h3>
+		<p>{{description}}</p>
+		<h4>{{template.price | currency}}</h4>
+		<a href="" class="btn btn-warning">Buy IT</a> <br>
+		<a href="#/templates" class="btn btn-info">Go Back</a> <br>
+	</div>
+</div>
