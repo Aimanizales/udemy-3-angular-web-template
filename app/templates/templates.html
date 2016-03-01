@@ -1,1 +1,17 @@
-This is the templates view
+<div class="row templates">
+	<div ng-repeat="template in templates" class="col-md-4">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3>{{template.name}}</h3>
+			</div>
+			<div class="panel-body">
+				<a href="#/templates/{{template.id}}"><img ng-src="images/{{template.images[0].name}}" alt="" class="img-thumbnail"></a>
+				
+				<h4>{{template.price | currency}}</h4>
+			</div>
+			<div class="panel-footer">
+				<a href="#/templates/{{template.id}}" class="btn btn-primary btn-block">Details</a>
+			</div>
+		</div>
+	</div>
+</div>
